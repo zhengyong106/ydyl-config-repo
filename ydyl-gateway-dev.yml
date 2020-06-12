@@ -1,2 +1,21 @@
-aaa:
-  bbb: 123
+zuul:
+  routes:
+    common-route:
+      path: /common/**
+      service-id: ydyl-provider-common
+    document-route:
+      path: /document/**
+      service-id: ydyl-provider-document
+  add-host-header: true # 设置添加host头信息，防止页面重定向到其他host
+  sensitive-headers: # 设置需要过滤掉的客户端附带的headers，这里什么都不过滤
+
+security:
+  oauth2:
+    client:
+      clientId: ydyl-gateway
+      clientSecret: ydyl-gateway
+      accessTokenUri: http://localhost:9000/oauth/token
+      userAuthorizationUri: http://localhost:9000/oauth/authorize
+    resource:
+      jwt:
+        key-value: "-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDqPjGYGn9JbWK6pJcC0ba9oz1T\ngIaUiycz19tjXnOqqQMvrmjy9FuFWBg7GnaC+L1uNhehfVrKmViSgD5FTIp/uPiW\nkZjb0DgnzBKmEKqjk4O7lm64jwDnOOVfEeiVppk7wFzZw5P0hKpRgjrU+gZ5bGyP\niPSPyGYdWD346gCvDQIDAQAB\n-----END PUBLIC KEY-----"
