@@ -1,0 +1,31 @@
+server:
+  servlet:
+    session:
+      cookie:
+        name: OAUTH2SESSION
+
+app:
+  security:
+    oauth2:
+      jwtSigningKey: "-----BEGIN RSA PRIVATE KEY-----\nMIICXQIBAAKBgQDqPjGYGn9JbWK6pJcC0ba9oz1TgIaUiycz19tjXnOqqQMvrmjy\n9FuFWBg7GnaC+L1uNhehfVrKmViSgD5FTIp/uPiWkZjb0DgnzBKmEKqjk4O7lm64\njwDnOOVfEeiVppk7wFzZw5P0hKpRgjrU+gZ5bGyPiPSPyGYdWD346gCvDQIDAQAB\nAoGANeDm0uPbXcYPhLs5ceBPXmi3AScprW6hboMKtx1BUSKNdVDyWlm62F22Oxf/\n5Om2VqyR/GbjNIEXlqDxUcrEeyInT/7bfRICFKkOiPqFrpd2aoVvq+DmeZvwNnv4\n0XdR4+ZxvASXTtQnRENl0XlRN+3kAoIVSL7fUKZjN73Oq8ECQQD0A7+F8RYXlJ5A\nZjsnLdU4yaGDMlVwvwbor0BE9DkJfubQMTby7ExBpFzXMhzc5+smuL//OQ6o0369\nBndYSOtBAkEA9b+TZ7oQV8WQNXzbdG2O2YkyTJDdtLVs+jouM2AvdGB0Fko0kA5Z\nIuLlhWUdf2G1kol2SMx6J0/AC73WGYVMzQJBAIhY/8/MItgSR0sc1LjTt2z/3av9\nmBhj5WxnYLYm8SgJLNfwaA/dUc7sFKR6b/5P6Om+Gip2q2ZSp2LgFhfSxwECQQDG\ncAPfZmd7+JQSHNg4k58eGaL8IJ5mJXnyNLjJ04l+N8SFmzYGfQ+NFBqyNIw1J/ku\ncsGI11RsGgHBeXFA+lqhAkB7KmmqqmvtsqyA4V9AxMERJh2vQ91uWk26INXNUuEB\nZ6Ao8qSRfXtAcLJCGA6izLs5sh2RjqPS7jnshLvSxywE\n-----END RSA PRIVATE KEY-----"
+      clients[0]:
+        clientId: ydyl-gateway
+        secret: ydyl-gateway
+        redirectUris: http://localhost:8080/login
+        accessTokenValidateSeconds: 7200
+        scopes: "all"
+        authorizedGrantTypes: authorization_code, implicit, refresh_token
+      clients[1]:
+        clientId: ydyl-common
+        secret: ydyl-common
+        redirectUris: http://localhost:9100/login
+        accessTokenValidateSeconds: 7200
+        scopes: "all"
+        authorizedGrantTypes: authorization_code, implicit, refresh_token
+      clients[2]:
+        clientId: ydyl-document
+        secret: ydyl-document
+        redirectUris: http://localhost:9200/login
+        accessTokenValidateSeconds: 7200
+        scopes: "all"
+        authorizedGrantTypes: authorization_code, implicit, refresh_token
