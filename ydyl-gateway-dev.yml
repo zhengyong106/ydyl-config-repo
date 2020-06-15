@@ -1,10 +1,12 @@
 zuul:
   routes:
     common-route:
-      path: /common/**
+      path: /app/common/**
+      stripPrefix: false
       service-id: ydyl-provider-common
     document-route:
-      path: /document/**
+      path: /app/document/**
+      stripPrefix: false
       service-id: ydyl-provider-document
   add-host-header: true # 设置添加host头信息，防止页面重定向到其他host
   sensitive-headers: # 设置需要过滤掉的客户端附带的headers，这里什么都不过滤
