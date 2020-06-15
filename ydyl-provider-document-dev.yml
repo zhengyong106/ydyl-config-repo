@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@192.168.1.109:1521:orcl
+    username: rtkts
+    password: rtk123abc
+    driver-class-name: oracle.jdbc.OracleDriver
+    hikari:
+      minimum-idle: 5 # 最小空闲连接，默认值10
+      idle-timeout: 600000 # 空闲连接超时时间，默认值600000（10分钟）
+      maximum-pool-size: 150 #最大连接数
+
+security:
+  oauth2:
+    client:
+      client-id: ydyl-document
+      client-secret: ydyl-document
+      access-token-uri: http://localhost:9000/oauth/token
+      user-authorization-uri: http://localhost:9000/oauth/authorize
+    resource:
+      jwt:
+        key-value: "-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDqPjGYGn9JbWK6pJcC0ba9oz1T\ngIaUiycz19tjXnOqqQMvrmjy9FuFWBg7GnaC+L1uNhehfVrKmViSgD5FTIp/uPiW\nkZjb0DgnzBKmEKqjk4O7lm64jwDnOOVfEeiVppk7wFzZw5P0hKpRgjrU+gZ5bGyP\niPSPyGYdWD346gCvDQIDAQAB\n-----END PUBLIC KEY-----"
+
+mybatis:
+  configuration:
+    jdbc-type-for-null: null
+  mapper-locations: classpath*:/mapping/**/*Mapper.xml
