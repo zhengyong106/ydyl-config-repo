@@ -20,6 +20,19 @@ security:
       jwt:
         key-value: "-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDqPjGYGn9JbWK6pJcC0ba9oz1T\ngIaUiycz19tjXnOqqQMvrmjy9FuFWBg7GnaC+L1uNhehfVrKmViSgD5FTIp/uPiW\nkZjb0DgnzBKmEKqjk4O7lm64jwDnOOVfEeiVppk7wFzZw5P0hKpRgjrU+gZ5bGyP\niPSPyGYdWD346gCvDQIDAQAB\n-----END PUBLIC KEY-----"
 
+ydyl:
+  oauth2:
+    client:
+      accessTokenUrl: http://localhost:9000/oauth/token
+      clientId: ydyl-document
+      clientSecret: ydyl-document
+      clientAuthenticationScheme: header
+
+app:
+  anonymous[0]: /app/document/selectMenuList
+  anonymous[1]: /app/document/selectMenuListByParentId
+  anonymous[2]: /app/document/selectMenuDocumentByMenuId
+
 mybatis:
   configuration:
     jdbc-type-for-null: null
