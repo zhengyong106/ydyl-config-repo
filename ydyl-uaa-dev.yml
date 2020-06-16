@@ -14,18 +14,18 @@ app:
         redirectUris: http://localhost:8080/login
         accessTokenValidateSeconds: 7200
         scopes: "all"
-        authorizedGrantTypes: authorization_code, implicit, refresh_token
+        authorizedGrantTypes: authorization_code, client_credentials, refresh_token
       clients[1]:
         clientId: ydyl-common
         secret: ydyl-common
         redirectUris: http://localhost:9100/login
         accessTokenValidateSeconds: 7200
         scopes: "all"
-        authorizedGrantTypes: authorization_code, implicit, refresh_token
+        authorizedGrantTypes: authorization_code, client_credentials, refresh_token
       clients[2]:
         clientId: ydyl-document
         secret: ydyl-document
         redirectUris: http://localhost:9200/login
         accessTokenValidateSeconds: 7200
         scopes: "all"
-        authorizedGrantTypes: authorization_code, implicit, refresh_token
+        authorizedGrantTypes: authorization_code, client_credentials, refresh_token
