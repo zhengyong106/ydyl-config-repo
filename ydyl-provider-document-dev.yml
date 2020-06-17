@@ -9,6 +9,11 @@ spring:
       idle-timeout: 600000 # 空闲连接超时时间，默认值600000（10分钟）
       maximum-pool-size: 150 #最大连接数
 
+mybatis:
+  configuration:
+    jdbc-type-for-null: null
+  mapper-locations: classpath*:/mapping/**/*Mapper.xml
+
 security:
   oauth2:
     resource:
@@ -26,8 +31,3 @@ app:
         clientId: ydyl-provider-document
         clientSecret: ydyl-provider-document
         clientAuthenticationScheme: header
-
-mybatis:
-  configuration:
-    jdbc-type-for-null: null
-  mapper-locations: classpath*:/mapping/**/*Mapper.xml
