@@ -1,0 +1,14 @@
+security:
+  oauth2:
+    resource:
+      jwt:
+        key-value: "-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDqPjGYGn9JbWK6pJcC0ba9oz1T\ngIaUiycz19tjXnOqqQMvrmjy9FuFWBg7GnaC+L1uNhehfVrKmViSgD5FTIp/uPiW\nkZjb0DgnzBKmEKqjk4O7lm64jwDnOOVfEeiVppk7wFzZw5P0hKpRgjrU+gZ5bGyP\niPSPyGYdWD346gCvDQIDAQAB\n-----END PUBLIC KEY-----"
+
+app:
+  security:
+    oauth2:
+      clientCredentials:
+        accessTokenUri: http://localhost:9000/oauth/token
+        clientId: ydyl-provider-common
+        clientSecret: ydyl-provider-common
+        clientAuthenticationScheme: header
