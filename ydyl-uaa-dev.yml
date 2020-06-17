@@ -16,16 +16,23 @@ app:
         scopes: "all"
         authorizedGrantTypes: authorization_code, client_credentials, refresh_token
       clientDetails[1]:
-        clientId: ydyl-common
-        secret: ydyl-common
+        clientId: ydyl-provider-common
+        secret: ydyl-provider-common
         redirectUris: http://localhost:9100/login
         accessTokenValidateSeconds: 7200
         scopes: "all"
         authorizedGrantTypes: authorization_code, client_credentials, refresh_token
       clientDetails[2]:
-        clientId: ydyl-document
-        secret: ydyl-document
+        clientId: ydyl-provider-document
+        secret: ydyl-provider-document
         redirectUris: http://localhost:9200/login
+        accessTokenValidateSeconds: 7200
+        scopes: "all"
+        authorizedGrantTypes: authorization_code, client_credentials, refresh_token
+      clientDetails[3]:
+        clientId: ydyl-provider-hospital
+        secret: ydyl-provider-hospital
+        redirectUris: http://localhost:9300/login
         accessTokenValidateSeconds: 7200
         scopes: "all"
         authorizedGrantTypes: authorization_code, client_credentials, refresh_token
