@@ -28,6 +28,6 @@ app:
     oauth2:
       clientCredentials:
         accessTokenUri: http://localhost:9000/oauth/token
-        clientId: ydyl-provider-document
-        clientSecret: ydyl-provider-document
+        clientId: drhui-provider-document
+        clientSecret: drhui-provider-document
         clientAuthenticationScheme: header
