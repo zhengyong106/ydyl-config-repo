@@ -3,19 +3,19 @@ zuul:
     common-route:
       path: /app/common/**
       stripPrefix: false
-      service-id: ydyl-provider-common
+      service-id: drhui-provider-common
     document-route:
       path: /app/document/**
       stripPrefix: false
-      service-id: ydyl-provider-document
+      service-id: drhui-provider-document
   add-host-header: true # 设置添加host头信息，防止页面重定向到其他host
   sensitive-headers: # 设置需要过滤掉的客户端附带的headers，这里什么都不过滤
 
 security:
   oauth2:
     client:
-      clientId: ydyl-gateway
-      clientSecret: ydyl-gateway
+      clientId: drhui-gateway
+      clientSecret: drhui-gateway
       accessTokenUri: http://localhost:9000/oauth/token
       userAuthorizationUri: http://localhost:9000/oauth/authorize
     resource:
