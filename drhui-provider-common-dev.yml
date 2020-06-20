@@ -9,6 +9,6 @@ app:
     oauth2:
       clientCredentials:
         accessTokenUri: http://localhost:9000/oauth/token
-        clientId: ydyl-provider-common
-        clientSecret: ydyl-provider-common
+        clientId: drhui-provider-common
+        clientSecret: drhui-provider-common
         clientAuthenticationScheme: header
